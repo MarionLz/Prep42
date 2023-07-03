@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+char *ft_strncpy(char *dest, char *src, unsigned int n)
+{
+  int i;
+
+  i = 0;
+  while (i < n && src[i] != '\0')
+    {
+      dest[i] = src[i];
+      i++;
+    }
+  while (n > i)
+    {
+      dest[i] = '\0';
+      i++;
+    }
+  return(dest);
+}
+
+int main()
+{
+  int n;
+  char src[] = "calin";
+  char dest[20];
+  char *copy;
+
+  n = 2;
+  copy = ft_strncpy(dest, src, n);
+  printf("La chaine copiee est : %s", copy);
+  return(0);
+}

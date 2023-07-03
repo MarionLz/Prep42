@@ -1,0 +1,22 @@
+int ft_atoi(char *str)
+{
+  int i;
+  int integer;
+
+  i = 0;
+  while (0 <= str[i] <=9)
+    {
+     integer = str[i];
+     i++;
+    }
+  return(integer);
+}
+
+int main()
+{
+  int integer;
+  
+  char str[] = "12345ab";
+  integer = ft_atoi(str);
+  return(0);
+}

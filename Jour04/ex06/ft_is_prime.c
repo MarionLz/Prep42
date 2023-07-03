@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int ft_is_prime(int nb)
+{
+  if (nb <=1)
+    {
+      return(0);
+    }
+  else
+    {
+      int i;
+      int resultat;
+      
+      i = 1;
+      while (i <= nb)
+	{
+	  resultat = nb % i;
+	  if (resultat == 0 && i != nb && i != 1)
+	    {
+	      return(0);
+	    }
+	  i++;
+	}
+      return(1);
+    }
+}
+
+int main()
+{
+  int nb;
+  int resultat;
+
+  nb = 9785;
+  resultat = ft_is_prime(nb);
+  printf("Le nombre est-il premier ? %d", resultat);
+  return(0);
+}

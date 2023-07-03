@@ -1,0 +1,41 @@
+
+#include <unistd.h>
+#include <stdio.h>
+
+int ft_iterative_factorial(int nb)
+{
+  if (nb < 0 || nb > 30)
+    {
+      return (0);
+    }
+  
+  else if (nb == 1)
+    {
+      return (1);
+    }
+    
+  else
+    {
+      int i;
+      i = 1;
+      int factorielle;
+      factorielle = 1;
+
+      while (i <= nb)
+	{
+	  factorielle = factorielle * i;
+	  i = i + 1;
+	}
+      return (factorielle);
+    }
+}
+
+int main()
+{
+  int nb;
+  nb = 1;
+  int resultat;
+  resultat = ft_iterative_factorial(nb);
+  printf("Le résultat de la factorielle est: %d", resultat);  
+  return (0);
+}
